@@ -1,19 +1,21 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-import logo from '../assets/logo.webp';
+import React from "react";
+import { useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.webp";
 
 const Header = () => {
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === "/";
 
   const scrollToChatbot = () => {
-    document.getElementById('chatbot-section').scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById("chatbot-section")
+      .scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <header className="bg-green-600 text-white shadow-lg">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        
         {/* Logo Section */}
         <div className="flex items-center space-x-2">
           <img
@@ -26,26 +28,49 @@ const Header = () => {
 
         {/* Navigation Menu */}
         <nav className="hidden md:flex space-x-8">
-          <a 
-            href="/" 
-            className="hover:text-gray-200 transition duration-300 ease-in-out">
+          <NavLink
+            className={({ isActive }) =>
+              `hover:text-gray-200 transition duration-300 ease-in-out ${
+                isActive ? "text-green-900" : ""
+              }`
+            }
+            to="/"
+          >
             Home
-          </a>
-          <a 
-            href="/services" 
-            className="hover:text-gray-200 transition duration-300 ease-in-out">
+          </NavLink>
+
+          <NavLink
+            className={({ isActive }) =>
+              `hover:text-gray-200 transition duration-300 ease-in-out ${
+                isActive ? "text-green-900" : ""
+              }`
+            }
+            to="/services"
+          >
             Services
-          </a>
-          <a 
-            href="/aboutus" 
-            className="hover:text-gray-200 transition duration-300 ease-in-out">
+          </NavLink>
+
+          <NavLink
+            className={({ isActive }) =>
+              `hover:text-gray-200 transition duration-300 ease-in-out ${
+                isActive ? "text-green-900" : ""
+              }`
+            }
+            to="/aboutus"
+          >
             About Us
-          </a>
-          <a 
-            href="/contactus" 
-            className="hover:text-gray-200 transition duration-300 ease-in-out">
+          </NavLink>
+
+          <NavLink
+            className={({ isActive }) =>
+              `hover:text-gray-200 transition duration-300 ease-in-out ${
+                isActive ? "text-green-900" : ""
+              }`
+            }
+            to="/contactus"
+          >
             Contact
-          </a>
+          </NavLink>
         </nav>
 
         {/* Conditional "Start Chatting" Button */}
