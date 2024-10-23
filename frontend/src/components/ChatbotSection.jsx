@@ -102,7 +102,7 @@ const ChatbotSection = () => {
 
   const styles = {
     container: {
-      maxWidth: '600px',
+      maxWidth: '70vw',
       margin: '50px auto',
       fontFamily: 'Arial, sans-serif',
       padding: '20px',
@@ -163,7 +163,7 @@ const ChatbotSection = () => {
 
   return (
     <div id="chatbot-section" style={styles.container}>
-      <h1>Krushi-Bot</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center text-green-600">Krushi-Bot</h1>
       <div style={styles.chatBox}>
         {chatHistory.map((chat, index) => (
           <div

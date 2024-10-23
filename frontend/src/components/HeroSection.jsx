@@ -32,7 +32,7 @@ const HeroSection = () => {
 
       {/* Chatbot Logo */}
       <div
-        className="absolute top-20 right-10 cursor-pointer w-16 h-16 rounded-full bg-white bg-opacity-60 flex items-center justify-center border-2 border-white hover:opacity-80 transition-opacity duration-300"
+        className="absolute bottom-24 right-10 cursor-pointer w-16 h-16 rounded-full bg-white bg-opacity-60 flex items-center justify-center border-2 border-white hover:opacity-80 transition-opacity duration-300"
         onClick={scrollToChatbot}
         title="Start Chatting with the Bot"
       >
